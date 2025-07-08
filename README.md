@@ -1,73 +1,97 @@
 
-# Nome do Projeto
+# Arquitetura RPA
 
 Descrição breve do projeto de automação Python.
+
 
 ## Estrutura do Projeto
 
 ```plaintext
-project_name/
-│
-├── automation_scripts/
-│   ├── __init__.py
-│   ├── script1.py
-│   ├── script2.py
-│   └── utils.py
+arquitetura_rpa/
 │
 ├── config/
+|   ├── __init__.py
+|   ├── .env
+|   └── config.py
+|
+├── database/
+│   ├── models/
+|   |   └──tabela.py
+│   └── conexao.py
+│   
+├── docs/
+│   └── arquivo.docx
+│
+├── exceptions/
 │   ├── __init__.py
-│   ├── config.yaml
-│   └── logging.conf
+|   └── exceptions.py
 │
-├── data/
-│   ├── input/
-│   └── output/
-│
+├── image/
+|
 ├── logs/
-│   └── project.log
-│
+|   └──anomesdia.log
+|
+├── scripts/
+|   └── script1.py
+|
 ├── tests/
-│   ├── __init__.py
-│   ├── test_script1.py
-│   └── test_script2.py
+|   └── tests_script1.py
+|
+├── utils/
+|   ├── __init__.py
+|   └── funcoes_projeto.py
 │
 ├── .gitignore
-├── README.md
-├── requirements.txt
-└── setup.py
+├── mestre.py
+├── readme.md
+└── requirements.txt
 ```
 
 ## Descrição das Pastas e Arquivos
 
-### automation_scripts/
-Contém os scripts de automação principais e qualquer código utilitário necessário.
-- `__init__.py`: Torna o diretório um pacote Python.
-- `script1.py`, `script2.py`: Scripts de automação individuais.
-- `utils.py`: Funções utilitárias comuns usadas pelos scripts.
-
 ### config/
-Contém arquivos de configuração.
-- `config.yaml`: Configurações gerais do projeto, como credenciais, URLs, parâmetros de execução.
-- `logging.conf`: Configurações para o sistema de logging.
+Contém as configurações de variaveis globais.
+- `__init__.py`: Este arquivo armazena as variaveis gerais.
+- `.env`: Este arquivo armazena variaveis privadas.
+- `config.py`: Este arquivo armazenar as variaveis do projeto.
 
-### data/
-Diretório para armazenar dados de entrada e saída.
-- `input/`: Dados de entrada necessários para os scripts de automação.
-- `output/`: Dados gerados pelos scripts de automação.
+### database/
+Contém arquivos relacionados ao banco de dados.
+- `models/tabela.py`: Este arquivo armazena as classes que representam as tabelas do banco de dados.
+- `conexao.py`: Configurações acesso ao banco.
 
-### logs/
-Diretório para armazenar arquivos de log.
-- `project.log`: Arquivo de log principal do projeto.
+### docs/
+Diretório para armazenar documentos.
+- `arquivo.docx`: Este arquivo armazena todo passo a passo de como realizar os processos manualmente .
 
-### tests/
+### exceptions/
 Contém os testes unitários para os scripts de automação.
-- `__init__.py`: Torna o diretório um pacote Python.
-- `test_script1.py`, `test_script2.py`: Testes específicos para cada script de automação.
+- `__init__.py`: Armazena exceções gerais.
+- `exceptions.py`: Armazena exceções do projeto.
+
+### image/
+Contém as imagens necessarias do projeto.
+
+### Logs/
+Contém os arquivos de log do sistema.
+
+### Scripts/
+Contém os arquivos de responsaveis pelas automações do projeto.
+- `script1.py`: Armazena o script de automação do processo.
+
+### Tests/
+Contém os arquivos de teste dos scripts.
+- `tests_scripts1.py`: Armazena o script de teste do arquivo script1.
+
+### Utils/
+Contém as funcoes globais.
+- `__init__.py`: Armazenas as funções gerais.
+- `funcoes_projeto`: Armazena as funções do projeto.
 
 ### Arquivos Raiz
 - `.gitignore`: Arquivo que especifica quais arquivos e diretórios devem ser ignorados pelo Git.
+- `meste.py`: Script de controle de execução dos scripts.
 - `README.md`: Arquivo de documentação do projeto. Deve conter informações sobre o projeto, como configurar e executar.
 - `requirements.txt`: Lista de dependências do projeto. Deve conter todos os pacotes Python necessários.
-- `setup.py`: Script de configuração do projeto. Útil se você planeja distribuir ou instalar o projeto como um pacote Python.
 
 

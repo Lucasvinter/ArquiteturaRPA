@@ -1,0 +1,1 @@
+"Arquivo responsavel por gerenciar as execuções dos scripts."
